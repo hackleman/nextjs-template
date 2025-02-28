@@ -67,3 +67,21 @@ export const generatePagination = (currentPage: number, totalPages: number) => {
     totalPages,
   ];
 };
+
+export const debouncer = (cb: Function, timeout: number = 2000) => {
+  let timeoutId: NodeJS.Timeout | number = 0;
+  let searchTerm = '';
+  const cbcontext = this;
+
+  const timer = () => {
+    timeoutId = setTimeout(() => {
+      cb.call(cbcontext, searchTerm)
+    }, timeout)
+  }
+
+  return function(term: string) {
+    searchTerm = term;
+    if (timeoutId != 0) clearTimeout(timeoutId);
+    timer();
+  }
+}

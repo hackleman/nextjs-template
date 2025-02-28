@@ -1,8 +1,19 @@
 import postgres from 'postgres';
 import bcrypt from 'bcryptjs';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
-
+import { logger } from '@/logger'
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+
+async function tableExists(tableName: string) {
+  const result = await sql`
+    SELECT EXISTS (
+      SELECT FROM information_schema.tables 
+      WHERE table_schema = 'public' 
+      AND table_name = ${tableName}
+    ) AS table_exists;
+  `;
+  return result[0].table_exists;
+}
 
 async function seedUsers() {
   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
@@ -25,6 +36,8 @@ async function seedUsers() {
       `;
     }),
   );
+
+  logger.info(`${insertedUsers.length} users have been INSERTED INTO USERS`);
 
   return insertedUsers;
 }
@@ -51,6 +64,7 @@ async function seedInvoices() {
       `,
     ),
   );
+  logger.info(`${insertedInvoices.length} invoices have been INSERTED INTO INVOICES`);
 
   return insertedInvoices;
 }
@@ -76,6 +90,7 @@ async function seedCustomers() {
       `,
     ),
   );
+  logger.info(`${insertedCustomers.length} customers have been INSERTED INTO CUSTOMERS`);
 
   return insertedCustomers;
 }
@@ -97,6 +112,7 @@ async function seedRevenue() {
       `,
     ),
   );
+  logger.info(`${insertedRevenue.length} revenues have been INSERTED INTO REVENUES`);
 
   return insertedRevenue;
 }
@@ -104,10 +120,7 @@ async function seedRevenue() {
 export async function GET() {
   try {
     const result = await sql.begin((sql) => [
-      seedUsers(),
-      seedCustomers(),
-      seedInvoices(),
-      seedRevenue(),
+      seedInvoices()
     ]);
 
     return Response.json({ message: 'Database seeded successfully' });
