@@ -2,7 +2,7 @@ import postgres from 'postgres';
 import bcrypt from 'bcryptjs';
 import { logger } from '@/logger'
 import { User } from './definitions';
-import { customers, revenue, users } from './placeholder-data';
+import { customers, revenue, users, invoices } from './placeholder-data';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
