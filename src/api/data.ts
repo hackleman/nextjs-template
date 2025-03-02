@@ -74,7 +74,7 @@ export async function fetchCardData() {
 }
 
 const ITEMS_PER_PAGE = 10;
-const CUSTOMERS_PER_PAGE = 5;
+const CUSTOMERS_PER_PAGE = 10;
 
 export async function fetchFilteredInvoices(
   query: string,
