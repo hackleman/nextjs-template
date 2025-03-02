@@ -1,13 +1,13 @@
 import { Suspense } from 'react';
 
-import Pagination from '@/app/ui/invoices/pagination';
-import Search from '@/app/ui/search';
-import Table from '@/app/ui/invoices/table';
-import { CreateInvoice } from '@/app/ui/invoices/buttons';
-import { lusitana } from '@/app/ui/styles/fonts';
-import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
+import Pagination from '@/src/components/invoices/pagination';
+import Search from '@/src/components/search';
+import Table from '@/src/components/invoices/table';
+import { CreateInvoice } from '@/src/components/invoices/buttons';
+import { lusitana } from '@/src/components/styles/fonts';
+import { InvoicesTableSkeleton } from '@/src/components/skeletons';
 
-import { fetchInvoicesPages } from '@/app/lib/data';
+import { fetchInvoicesPages } from '@/src/api/data';
 
 export default async function Page(props: {
   searchParams?: Promise<{
@@ -15,7 +15,6 @@ export default async function Page(props: {
     page?: string;
   }>;
 }) {
-  console.log(await props.searchParams)
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;

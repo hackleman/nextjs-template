@@ -1,2 +1,23 @@
 {"level":"info","message":"13 invoices have been INSERTED INTO INVOICES","timestamp":"2025-02-28T01:49:59.370Z"}
 {"level":"info","message":"13 invoices have been INSERTED INTO INVOICES","timestamp":"2025-02-28T01:52:21.163Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T20:58:35.196Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T20:59:17.784Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T20:59:28.974Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T20:59:46.341Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:00:00.137Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:00:36.565Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:01:59.111Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:02:24.430Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:03:33.103Z"}
+{"level":"info","message":"0 items in INVOICES table","timestamp":"2025-02-28T21:03:48.751Z"}
+{"level":"info","message":"-1 items in INVOICES table","timestamp":"2025-02-28T21:04:21.649Z"}
+{"level":"info","message":"null items in INVOICES table","timestamp":"2025-02-28T21:05:10.894Z"}
+{"level":"info","message":"null items in INVOICES table","timestamp":"2025-02-28T21:05:29.390Z"}
+{"level":"info","message":"[object Object] items in INVOICES table","timestamp":"2025-02-28T21:06:57.664Z"}
+{"level":"info","message":"53 items in INVOICES table","timestamp":"2025-02-28T21:09:17.360Z"}
+{"level":"info","message":"invoice created","timestamp":"2025-02-28T22:51:49.987Z"}
+{"level":"info","message":"Writing invoice to INVOICES table: {\"customerId\":\"cc27c14a-0acf-4f4a-a6c9-d45682c144b9\",\"amount\":\"123\",\"status\":\"pending\"}","timestamp":"2025-02-28T22:52:57.859Z"}
+{"level":"info","message":"Writing invoice to INVOICES table: {\"customerId\":\"13d07535-c59e-4157-a011-f8d2ef4e0cbb\",\"amount\":\"123\",\"status\":\"pending\"}","timestamp":"2025-02-28T22:54:10.239Z"}
+{"level":"info","message":"Type of data.amount: string","timestamp":"2025-02-28T22:54:10.239Z"}
+{"level":"info","message":"Writing invoice to INVOICES table: {\"customerId\":null,\"amount\":\"\",\"status\":null}","timestamp":"2025-02-28T22:54:12.278Z"}
+{"level":"info","message":"Type of data.amount: string","timestamp":"2025-02-28T22:54:12.278Z"}
