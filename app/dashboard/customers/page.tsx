@@ -1,8 +1,7 @@
 import { Suspense } from 'react';
 import Pagination from '@/src/components/invoices/pagination';
-import { fetchCustomersPages, fetchFilteredCustomers } from '@/src/api/data';
+import { fetchCustomersPages } from '@/src/api/data';
 import { lusitana } from '@/src/components/styles/fonts';
-import { CreateInvoice } from '@/src/components/invoices/buttons';
 import Search from '@/src/components/search';
 import { CustomersTableSkeleton } from '@/src/components/skeletons';
 import Table from '@/src/components/customers/table';

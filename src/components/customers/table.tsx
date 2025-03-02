@@ -1,9 +1,5 @@
 import Image from 'next/image';
-import { lusitana } from '@/src/components/styles/fonts';
-import Search from '@/src/components/search';
 import { fetchFilteredCustomers } from '@/src/api/data';
-import { CustomersTableSkeleton } from '../skeletons';
-import { Suspense } from 'react';
 
 export default async function CustomersTable({
   query, currentPage
